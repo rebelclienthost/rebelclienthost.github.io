@@ -1,0 +1,160 @@
+* {
+    transition: .25s ease;
+}
+
+body {
+    background: var(--background-colour);
+}
+:root {
+
+    --background-colour: black; 
+    --text-colour: white;
+    --text-colour-alt: black;
+}
+
+#header {
+    display: flex;
+    padding: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    gap: .25rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+
+}
+
+#header .logo-aligner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+}
+
+#header #menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+#header #menu p:hover {
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+    #header {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #header {
+        flex-direction: column;
+    }
+}
+
+h1 {
+    font-family: 'Panton';
+    font-weight: 700; 
+    font-size: 1.5rem;
+    color: white;
+    line-height: 1.5rem;
+    margin: 0;
+}
+
+p {
+    font-family: poppins;
+    font-weight: 500; 
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.621);
+    margin: 0;
+    line-height: 1rem;
+}
+
+
+
+.main {
+    min-height: 100vh;
+    background: url('../img/background/pvp.jpeg');
+    background-size: cover;
+    background-position: bottom;
+    object-fit: cover;
+
+}
+
+
+body {
+    margin: 0;
+}
+
+#header img {
+    height: 3rem;
+    aspect-ratio: 1;
+}
+
+.display {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-top: -6rem;
+}
+
+.data-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .15rem;
+}
+
+.data-flex-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+}
+
+.display img {
+    width: 8rem;
+}
+
+.display h1 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+}
+
+.display p {
+    font-size: 1rem;
+}
+
+button:not(.alt) {
+    padding: 1rem;
+    backdrop-filter: blur(1px);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    border: none;
+    color: white;
+    font-family: Panton;
+    background: rgba(255, 255, 255, 0.137);
+}
+
+button.alt {
+    background: white;
+    border-radius: .25rem;
+    padding: .75rem 1rem;
+    color: rgb(2, 0, 20);
+    font-family: Panton;
+    border: none;
+}
+  
+.pntr:hover {
+    cursor: pointer;
+}
