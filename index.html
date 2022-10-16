@@ -1,79 +1,292 @@
+<!-- 
+
+    Rebel Client 2022 - All rights reserved.
+
+-->
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" href="img/logo/rebel_logo.png" type="image/icon type">
-
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/fonts.css">
-
-        <link rel="stylesheet" href="https://eswap.pro/fonts/boxicons/css/animations.css">
-	    <link rel="stylesheet" href="https://eswap.pro/fonts/boxicons/css/boxicons.css">
-        <title>Rebel Client - Home</title>
-	    
-	<meta name="description"content="Rebel Client - Releasing soon!">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head> 
-    
-    <body>
+        <title>Home</title>
+        <link rel="icon" href="media/logo/rebel_logo.png" type="image/icon type">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
 
+        <link rel="stylesheet" href="css/boxicons/css/animations.css">
+	    <link rel="stylesheet" href="css/boxicons/css/boxicons.css">
+
+        <link rel="stylesheet" href="css/fonts.css">
 
 
-        <div class="main">
+        <style>
+            :root {
+                --background-colour: black;
+                
+                --text-colour: white;
+                --text-colour-desc: rgba(255, 255, 255, 0.58);
+    
+                --main-colour: #1400FF;
+            }
+    
+            * {
+                transition: .5s ease all;
+                margin: 0;
+            }
+            body {
+                background: var(--background-colour);
+    
+                font-family: Whyte;
+                padding: 0 10vw;
+                color: var(--text-colour);
+
+                overflow-x: hidden;
+            }
+    
+    
+            h1 {
+                font-weight: 700;
+                font-size: 5rem;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-weight: 700;
+            font-size: 1.5rem;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 1.75rem;
+                color: var(--text-colour-desc)
+            }
+
+
+    
+            #header {
+                padding: 2rem 4rem;
+                z-index: 5;
+                position: relative;
+                gap: 10rem;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            #header #menu {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            #header #menu p {
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            #header #menu p:hover {
+                color: var(--text-colour)
+            }
+
+            button {
+                background: rgba(255, 255, 255, 0.16);
+                font-size: 1.25rem;
+                line-height: 1.25rem;
+                border-radius: 2rem;
+                padding: 1rem 2rem;
+                font-weight: 700;
+                color: var(--text-colour);
+                border: none;
+
+                cursor: pointer;
+            }
+
+            button.data-flex {
+                gap: .5rem;
+            }
+
+            button i {
+                font-size: 2rem;
+            }
+
+            button.movei:hover i {
+                transform: translateX(.25rem);
+            }
+
             
-            <div id="header">
-                <div class="logo-aligner">
-                    <!--
-                    <img src="img/logo/rebel_logo.png" alt="/" style="margin-top: .3rem;">
-                    <h1 >
-                        EBEL CLIENT
-                    </h1>
-                    -->
-                </div>
+
+            .data-flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                width: max-content;
+            }
 
 
-                <div id="menu"  >
+            #header img {
+                width: 2.5rem;
+            }
 
-                </div>
 
-                <div></div>
-                
-                
+
+            .divider {
+                display: grid;
+                place-items: center;
+                z-index: 5;
+                position: relative;
+            }
+
+            .divider .text {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                justify-content: flex-start;
+            }
+
+            @media screen and (min-width: 1000px) {
+                .divider {
+                    grid-template-columns: repeat(2,50%);
+                    grid-template-rows: auto;
+                }
+            }
+
+            .absolute {
+                position: absolute;
+            }
+
+            #mainimg {
+                z-index: 2;
+                transform: rotate(-10deg);
+                top: -35%;
+                width: 150%;
+                height: 50rem;
+                left: -50%;
+
+
+                background: url(media/backg/frame2.jpg);
+                background-size: 100% 200%;
+                background-position: 0% 50%;
+            }
+
+            span.highlight {
+                /*
+                background: url(media/backg/frame.jpg);
+                background-size: cover;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent !important;
+                */
+                color: var(--main-colour);
+                font-weight: 600;
+                font-size: 1.35rem;
+            }
+
+            .fedesc {
+                gap: 0 !important;
+            }
+
+            .fedesc p {
+                margin-top: 1rem;
+                font-size: 1.45rem;
+            }
+
+            .fedesc button {
+                margin-top: 1rem;
+            }
+
+
+
+            .features {
+                display: grid;
+            }
+
+            @media screen and (min-width: 800px) {
+                .features {
+                    grid-template-columns: repeat(3,33.333%);
+                }
+            }
+        </style>
+
+
+    </head>
+
+    
+    <body>
+        <div id="header">
+            <img src="media/logo/rebel_logo.png" alt="">
+            <div id="menu">
+                <p>Home</p>
+                <p>Download</p>
+                <p>Discord</p>
             </div>
+            <button class="data-flex movei">
+                Download
+                <i class='bx bx-chevron-right'></i>
+            </button>
+        </div>
 
-            <div class="display">
-                <div class="main-flex">
+        <div alt="" id="mainimg" class="absolute"></div>
 
-                    <div class="data-flex-v">
-                        <img src="img/logo/rebel_logo.png" alt="">
+        <div class="divider" style="margin-top: 5rem;">
+            <div class="text">
+                <h1>THE FUTURE OF MC CLIENTS</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt aliquam dolore ducimus aut in at, placeat eligendi suscipit saepe hic rerum vero, quisquam neque harum ex tempore provident quod magni!</p>
 
-                        <h1 style="margin-top: .25rem;text-align: center;">Rebel Client</h1>
-                        <p>Made by pros, for pros.</p>
-                    </div>
-                    
+                <div class="data-flex">
+                    <button class="data-flex movei" style="background: var(--main-colour)">
+                        Download
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                    <button class="data-flex movei" style="background: transparent;">
+                        Discord
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
 
-                    <div class="data-flex" style="gap: .5rem; margin-top: 2rem;">
-
-                        <button class="alt data-flex pntr" style="margin-top: 1rem; gap: .5rem;" onclick="window.location.href='https://dsc.gg/rebelclient'">
-                            <i class='bx bxl-discord-alt' style="font-size: 1.1rem;"></i>
-                            Join our Discord</button>
-                    </div>
-
-                    <p style="margin-top: 1rem;" class="rainbow">Officially being released soon!</p>
-                    
                 </div>
-
-                <div class="line">
-                    
-                </div>
-                
             </div>
-
-
         </div>
 
 
+        <div class="divider" style="margin-top: 30rem; gap: 4rem;">
+            <div class="text fedesc">
+                <h3><span class="highlight">PERFORMANCE</span></h3>
+                <h2>Class-leading performance</h2>
+
+                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis facere omnis, ipsam architecto sunt odio? Dolorem dolore officiis eligendi eaque nesciunt odit, temporibus quidem magnam quod exercitationem minus id non?</p>
+            
+                <button class="data-flex movei" style="background: var(--main-colour)">
+                    See for yourself
+                    <i class='bx bx-chevron-right'></i>
+                </button>
+                
+            
+            </div>
+
+            <div class="text fedesc">
+                <h3><span class="highlight">USER INTERFACE</span></h3>
+                <h2>Modern Interface</h2>
+
+                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis facere omnis, ipsam architecto sunt odio? Dolorem dolore officiis eligendi eaque nesciunt odit, temporibus quidem magnam quod exercitationem minus id non?</p>
+
+                <button class="data-flex movei" style="background: var(--main-colour)">
+                    See for yourself
+                    <i class='bx bx-chevron-right'></i>
+                </button>
+            </div>
+        </div>
 
 
+        <div style="height: 5rem;"></div>
     </body>
 </html>
+
